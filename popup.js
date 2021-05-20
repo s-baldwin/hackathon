@@ -1,7 +1,8 @@
 // // Initialize button with users's prefered color
 let muteTabs = document.getElementById("muteTabs");
 let muteSingleTab = document.querySelectorAll("#single-button");
-
+let wow = new Audio("images/wow.mp3");
+wow.volume = 0.2;
 // muteSingleTab.addEventListener("click", async () => {
 //   // console.log(allTabs[i]);
 //   toggleSingleTab(parseInt(Number(muteSingleTab.id)));
@@ -32,6 +33,7 @@ muteTabs.addEventListener("click", async () => {
     toggleMuteState(parseInt(allTabs[i].id));
     //toggleIndivState(parseInt(tabId))
   }
+  wow.play();
 });
 
 //
