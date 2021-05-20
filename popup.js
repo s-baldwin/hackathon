@@ -51,26 +51,17 @@ function toggleMuteState(tabId) {
 //     displayTabs();
 // });
 function displayTabs() {
-  let count = 0;
   allTabs.forEach((tab) => {
-    // init var ul = select ul
     let tabID = tab.id;
     let ul = document.querySelector("ul");
-    // init listItem = documentCreaEl("li")
     let listItem = document.createElement("li");
-    // listItem = innerHTML(tab.title)
     let singleButton = document.createElement("button");
-    // listItem.innerHTML("tab.title");
-    singleButton.setAttribute("id", tabID);
-    singleButton.setAttribute(
-      "onclick",
-      toggleSingleTab(Number(singleButton.id))
-    );
+    singleButton.addEventListener("click", async () => {
+      toggleSingleTab(tabID);
+    });
     let textnode = document.createTextNode(tab.title);
-    // listItem.setArrtribute("class='tab-item'")
     listItem.appendChild(textnode);
     listItem.appendChild(singleButton);
-    // listItem.setArrtribute
     ul.appendChild(listItem);
 
     // .document
