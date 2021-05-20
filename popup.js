@@ -57,14 +57,14 @@ function displayTabs() {
     let listItem = document.createElement("li");
 
     let horizontal = document.createElement("hr");
-    horizontal.style.color = "white";
-
+    // horizontal.style.color = "white";
     let singleButton = document.createElement("button");
-
+    singleButton.id = "tab-buttons";
     singleButton.addEventListener("click", async () => {
       toggleSingleTab(tabID);
     });
     let textnode = document.createTextNode(tab.title);
+    // textnode.style.color = "white";
     listItem.appendChild(textnode);
     listItem.appendChild(singleButton);
     listItem.appendChild(horizontal);
