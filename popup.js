@@ -55,13 +55,19 @@ function displayTabs() {
     let tabID = tab.id;
     let ul = document.querySelector("ul");
     let listItem = document.createElement("li");
+
+    let horizontal = document.createElement("hr");
+    horizontal.style.color = "white";
+
     let singleButton = document.createElement("button");
+
     singleButton.addEventListener("click", async () => {
       toggleSingleTab(tabID);
     });
     let textnode = document.createTextNode(tab.title);
     listItem.appendChild(textnode);
     listItem.appendChild(singleButton);
+    listItem.appendChild(horizontal);
     ul.appendChild(listItem);
 
     // .document
